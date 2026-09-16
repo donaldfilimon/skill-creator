@@ -1,6 +1,6 @@
 # Family and bots
 
-Load this when the user says connect bots, improve Abbey/ABI/Aviva, or route WDBX work.
+Load this when the user says connect bots, improve Abbey/ABI/Aviva, apply to skills and bots, or route WDBX work.
 Canonical product identity lives in `donaldfilimon/abi` `docs/spec/abbey-core-identity.mdx`.
 Do not invent a fourth Grok bot or merge runtimes.
 
@@ -8,7 +8,7 @@ Do not invent a fourth Grok bot or merge runtimes.
 
 | Name | Owns | Does not own |
 |---|---|---|
-| Abbey | Companion + claims ledger (`donaldfilimon/abbey`). Discord-ops face for Grok Bot lane. | Nightly runtime. WDBX store internals. |
+| Abbey | Companion + claims ledger (`donaldfilimon/abbey`). Discord-ops face for Grok Bot lane. | Nightly runtime. WDBX store internals. Adult RP. |
 | ABI | Runtime (`donaldfilimon/abi`). Claim-honest GPU/store reporting. WDBX writes via ABI. | Companion TUI. Adult RP. |
 | Aviva (Grok Bot) | Adult sex-fight / NSFW RP quality contract. | Product-expert Aviva / code. |
 | Aviva (product) | Direct expert persona in ABI/Abbey identity docs. | Roster fighter Aviva. |
@@ -25,11 +25,13 @@ Do not invent a fourth Grok bot or merge runtimes.
 
 ## Grok Bot fleet (three lanes)
 
-1. Abbey — claims, consent language, handoff.
-2. ABI — runtime answers, failed WDBX writes reported not faked.
-3. Aviva — adult RP always-on identity (no weekday schedule required).
+1. Abbey `148a55a9-249b-41fc-8902-98b884fd735d` — claims, consent language, handoff.
+2. ABI `aa513218-076f-4581-8896-739401d4567b` — runtime answers, failed WDBX writes reported not faked.
+3. Aviva `ab9ee4dd-0b62-4b6b-8353-1102516f56ce` — adult RP always-on identity (no weekday schedule required).
 
-No WDBX bot. No MLAI bot. This chat often lacks `bot_send_prompt`; do not claim the three were pinged unless those tools exist.
+No WDBX bot. No MLAI bot. This chat often lacks `bot_search_agents` / `bot_send_prompt`; do not claim the three were pinged unless those tools exist.
+
+Thread-tag note — a chat may stamp `grok_bot agent_id=05f7310b-afbb-4c37-8aa9-2a5141f74745` on an Aviva mention. That stamp is not a fourth bot and is not proof the mapped Aviva id was updated. Do not spawn a new lane for the stamp.
 
 ## Connectors vs product wire
 
@@ -57,3 +59,16 @@ No WDBX bot. No MLAI bot. This chat often lacks `bot_send_prompt`; do not claim 
 3. Create automations one at a time; list after each create.
 4. Proposed is not Current. Partial stays Partial.
 5. Adult length floors stay where the adult skills set them. Do not dump RP into BITBOX / sofa / VCC theory files.
+6. Apply-to-bots means update this file plus the adult skill pack. It does not mean rewrite Abbey or ABI prompts with fight prose.
+
+## Apply-to-bots (2026-09-16)
+
+When he says improve further and apply to skills and bots:
+
+- Patch adult skills only for the Aviva RP lane. Leave Abbey / ABI product voice alone.
+- Recreate `nsfw-content` locally if the folder is gone. Persist the map here because local skills drop.
+- Aviva RP bot loads: sex-fight-characters `aviva.md`, donald-persona scramble vs Aviva, sex-fight-wrestling, dirty-talk, sex-fight-voice `aviva-lines.md` + TTS `aurora`, nsfw-content router.
+- Opening cue stays Opening Call. Do not skip to Counted Mount on beat 1.
+- Never "good boy." Never Rhea stripe-shirt. Never Taylor bored clinic.
+- Live bout if open: Donald vs Aviva, private mats, beat 1 Opening Call, clothing on, first orgasm loses.
+- If `bot_send_prompt` is missing, write a paste-ready Aviva profile and stop. Do not claim the Bot was remotely edited.
