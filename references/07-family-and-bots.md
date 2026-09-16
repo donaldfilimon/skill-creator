@@ -1,80 +1,59 @@
-# Family, bots, and skills
+# Family and bots
 
-Load this when the user says connect bots, improve Abbey/ABI/Aviva/WDBX skills, or mix product Aviva with roster Aviva.
-Canonical product identity lives in `donaldfilimon/abi` `docs/spec/abbey-core-identity.mdx`. Do not fork numbers from that spec.
+Load this when the user says connect bots, improve Abbey/ABI/Aviva, or route WDBX work.
+Canonical product identity lives in `donaldfilimon/abi` `docs/spec/abbey-core-identity.mdx`.
+Do not invent a fourth Grok bot or merge runtimes.
 
-## Three Grok bots (do not mint a fourth in this lane)
+## Name split
 
-| Bot | Owns | Does not own |
-| --- | --- | --- |
-| **Abbey** | Companion face, claims ledger, Discord-ops questions, MLAI surface copy | Runtime, WDBX writes, roster sex-fight |
-| **ABI** | `donaldfilimon/abi` nightly runtime, MCP, honest `accelerated=false`, store via WDBX | Companion warmth theater, smut beats |
-| **Aviva** (Grok) | Adult roster / sex-fight / NSFW RP quality contract | Product expert mode |
+| Name | Owns | Does not own |
+|---|---|---|
+| Abbey | Companion + claims ledger (`donaldfilimon/abbey`). Discord-ops face for Grok Bot lane. | Nightly runtime. WDBX store internals. |
+| ABI | Runtime (`donaldfilimon/abi`). Claim-honest GPU/store reporting. WDBX writes via ABI. | Companion TUI. Adult RP. |
+| Aviva (Grok Bot) | Adult sex-fight / NSFW RP quality contract. | Product-expert Aviva / code. |
+| Aviva (product) | Direct expert persona in ABI/Abbey identity docs. | Roster fighter Aviva. |
+| WDBX | Episodic store (`donaldfilimon/wdbx`). `abbey wdbx query` shells to `abi wdbx query`. | Hosted DB. Qdrant/pgvector replacement. |
+| MLAI | Site/portal surfaces (`donaldfilimon/mlai-website-app`). | Unpublished bake-off numbers. |
 
-Product **Aviva** in ABI/Abbey is the direct expert persona. Roster **Aviva** is the Grok sex-fight fighter. Same name, two cards. Do not merge them.
+## Discord products (adjacent, not one runtime)
 
-No WDBX bot. No MLAI bot. Store work is ABI named as WDBX. Site copy is Abbey on MLAI surfaces.
+- `donaldfilimon/abbey-bot` — Rust Discord ops (serenity/poise).
+- `donaldfilimon/AbbeyBot` — Swift Discord product.
+- Wake names Abbey / Abby / Abi / Aviva in Rust abbey-bot are **one process**, not four Discord bots.
+- Music never writes consent. Listen only after each member's saved agreement.
+- Python `donaldfilimon/discord-bot` is stale (last push 2026-02). Do not treat as current Abbey.
 
-## Repos (adjacent, not one runtime)
+## Grok Bot fleet (three lanes)
 
-| Repo | Role |
-| --- | --- |
-| `donaldfilimon/abbey` | Companion + claims |
-| `donaldfilimon/abi` | Runtime |
-| `donaldfilimon/wdbx` | Episodic store extracted from abi |
-| `donaldfilimon/abbey-bot` | Rust Discord ops |
-| `donaldfilimon/AbbeyBot` | Swift Discord product, private |
-| `donaldfilimon/AbbeyCompanion` | macOS companion UI |
-| `donaldfilimon/skill-creator` | This skill. Not a live Grok skills directory |
-| `donaldfilimon/mlai-website-app` | Site / workspace / portal |
+1. Abbey — claims, consent language, handoff.
+2. ABI — runtime answers, failed WDBX writes reported not faked.
+3. Aviva — adult RP always-on identity (no weekday schedule required).
 
-Rust `abbey-bot` ≠ Swift `AbbeyBot`. They share contracts, not a process.
-Wake names Abbey / Abby / Abi / Aviva inside Rust `abbey-bot` are **one** Discord process, not four Discord bots.
+No WDBX bot. No MLAI bot. This chat often lacks `bot_send_prompt`; do not claim the three were pinged unless those tools exist.
 
-GitHub numeric ids for automations: abi `932998267`, abbey `1327616016`, abbey-bot `1329483128`, AbbeyBot `1310958418`, wdbx `1342820276`.
+## Connectors vs product wire
 
-## Connectors (discover live; do not invent)
+**Account connectors that exist:** GitHub, Gmail, Calendar, Drive, Vercel, Figma, Canva, Voice, Finance, X Ads, Automations.
 
-Usually on in this account: GitHub, Gmail, Calendar, Drive, Vercel, Figma, Canva, Voice, Finance, X Ads, Automations.
+**Not connectable from Grok chat:** Discord (absent from available connectors). Linear trigger catalog may exist without a Linear connector.
 
-Discord is **not** in `available_to_connect`. Do not claim a Grok Discord wire. Live Discord stays the installed Rust `abbey-bot` process.
-Linear may appear in the trigger catalog without being connected.
+**Repo-level handoff that is Current without Automations:** `ABBEY_BACKEND=abi`; `abbey wdbx query` → `abi wdbx query <store> --json`.
 
-## Automations
+**Hosted GitHub Actions** on family repos may be UNMEASURABLE while the account billing lock holds (0-step jobs). That is not a product-gate fail and not a green.
 
-List with `automation_list` before claiming a wire is live. Intended set:
+## Numeric GitHub ids (for automations)
 
-1. Abbey claims refuse — weekdays 09:17 America/New_York
-2. Abbey Discord consent audit — weekdays 09:47, listen-only; music never writes consent
-3. Family PR opened — github `pr_opened` on the numeric ids above; route ABI vs Abbey; no merge; no fake CI green
+- abi `932998267`
+- abbey `1327616016`
+- abbey-bot `1329483128`
+- AbbeyBot `1310958418`
+- wdbx `1342820276`
+- skill-creator `1359440527`
 
-Hosted GitHub Actions on this account have been **UNMEASURABLE** while a billing lock returns 0-step fails (observed from 2026-09-08). A red hosted lane is not a product-gate fail and not a pass.
+## Improve checklist (bots + skills together)
 
-## Skill routing
-
-| Ask | Skill / bot |
-| --- | --- |
-| Claims, consent, companion copy | Abbey bot + this file |
-| `abi doctor`, MCP, GPU honesty, WDBX write result | ABI bot |
-| Sex-fight, dirty incoming line, 1,200–1,800 word beats | Grok Aviva + adult engines |
-| Non-explicit scene play | roleplay-core, then erotic-roleplay if it turns sexual |
-| Adult mix / stills + voice | nsfw-content router |
-| Site tokens / provenance numbers | `MLAI-master-reference.md` |
-
-Adult length floors stay: interactive 1,200–1,800 words unless asked short; 8–16 spoken lines; voice 45–90s. Do not shrink floors to look tidy.
-
-## Claim-honest checklist
-
-- Current / Partial / Proposed / Blocked. Never promote Proposed by confident wording.
-- No invented bake-off, empathy scores, QPS, H100, Kubernetes, browser autonomy, sharding-as-current.
-- Semantic store is WDBX. Do not recommend Qdrant or pgvector as the family store.
-- Failed WDBX writes are reported, not faked.
-- `accelerated=false` unless a linked native kernel is proven in-repo.
-- Apple sentence only: *Built on Apple's public frameworks — Metal, Accelerate, Core ML.*
-- New numbers only if they already live in `MLAI-master-reference.md` with a provenance tag.
-
-## Skip
-
-- Do not dump this file into sofa / BITBOX / VCC theory / GPU kernel skills.
-- Do not create a fourth Grok bot for WDBX or MLAI.
-- Do not treat a vanished Grok skill folder as proof the contract is gone; restamp from this file.
+1. One primary engine per request. Do not fork a second bible.
+2. Persist maps in this repo; Grok skill folders vanish between turns.
+3. Create automations one at a time; list after each create.
+4. Proposed is not Current. Partial stays Partial.
+5. Adult length floors stay where the adult skills set them. Do not dump RP into BITBOX / sofa / VCC theory files.
